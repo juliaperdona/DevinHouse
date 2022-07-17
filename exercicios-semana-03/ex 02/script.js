@@ -10,8 +10,17 @@ var listaConvidados = [
     { nome: "Noemi", sobrenome: "Nakamura" },
     { nome: "Pedro", sobrenome: "Lobo" },
   ];
+ 
 
-  const listaCompleta = listaConvidados.map((convidados, indice)=> {
+  var listaEl = document.getElementById("lista");
+
+  const listaCompleta = listaConvidados.forEach((convidados, i)=> {
     console.log(convidados.nome + " " + convidados.sobrenome)
-    
+    var item = document.createElement("li");
+    var nome = listaConvidados[i].nome + " " + listaConvidados[i].sobrenome
+    item.textContent = nome;
+    listaEl.appendChild(item);
   })
+  
+
+  
