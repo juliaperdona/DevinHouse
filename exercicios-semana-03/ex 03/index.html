@@ -9,26 +9,31 @@
 <body>
     
 <script>
-let numero01 = prompt("Digite um número")
-let numero02 = prompt("Digite o segundo número")
+let numero01 = parseInt(prompt("Digite um número"))
+let numero02 = parseInt(prompt("Digite o segundo número"))
 let operacao = prompt("Escolha uma operação: +, -, *, /")
 
 switch (operacao) {
   case '+':
-    result = numero01 + numero02
+    alert(numero01 + numero02)
     break
   case '-':
-    result =  numero01 - numero02
+    alert(numero01 + numero02)
     break
 
   case '*':
-    result = numero01 * numero02
+    alert(numero01 + numero02)
     break
 
   case '/':
-    result = numero01 / numero02
+    alert(numero01 + numero02)  
     break
+
+    default:
+    alert("Não sei realizar essa operação :(");
+    break;
 }
+
 
 console.log(operacao)
 
