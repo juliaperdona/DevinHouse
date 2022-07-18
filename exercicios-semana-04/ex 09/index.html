@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação de idade</title>
+</head>
+
+<body>
+    <header>
+        <h3>Verifique se a idade informada percente a um Jovem, Adulto ou Idoso</h3>
+    </header>
+    <main>
+
+        <label for="num1">Digite uma idade</label>
+        <input type="number" id="idade" name="num01"><br><br>
+        <button onclick="clicar()">Classificar</button>
+        <p id="resultado"></p>
+
+    </main>
+
+    <script>
+
+
+        function clicar() {
+            var idade = document.querySelector("#idade").value;
+            if (idade <= 15) {
+                document.querySelector("#resultado").innerHTML = "Idade informada é de um Jovem";
+            } if (idade >= 16 && idade <= 64) {
+                document.querySelector("#resultado").innerHTML = "Idade informada é de um Adulto";
+            } if (idade >= 65) {
+                document.querySelector("#resultado").innerHTML = "Idade informada é de um Idoso ";
+            }
+        }
+    </script>
+</body>
+
+</html>
