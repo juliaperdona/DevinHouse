@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Par</title>
+</head>
+<body>
+    <header>
+        <h3>Verifique se o Número informado é par</h3>
+    </header>
+    <main>
+        
+        <label for="num1">Digite um número</label>
+        <input type="number" id="num01" name="num01"><br><br>
+        <button onclick="clicar()">Verificar paridade</button>
+        <p id="resultado"></p>
+        
+    </main>
+
+    <script>
+        
+
+        function clicar() {
+    var num1 = document.querySelector("#num01").value;
+    if(num1 % 2 === 0){
+        document.querySelector("#resultado").innerHTML = "É um número par";
+    }else{
+        document.querySelector("#resultado").innerHTML = "Não é um número par";
+    }
+    
+}
+    </script>
+</body>
+</html>
