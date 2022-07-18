@@ -28,9 +28,9 @@
             var idade = document.querySelector("#idade").value;
             if (idade <= 15) {
                 document.querySelector("#resultado").innerHTML = "Idade informada é de um Jovem";
-            } if (idade >= 16 && idade <= 64) {
+            } else if (idade >= 16 && idade <= 64) {
                 document.querySelector("#resultado").innerHTML = "Idade informada é de um Adulto";
-            } if (idade >= 65) {
+            } else if (idade >= 65) {
                 document.querySelector("#resultado").innerHTML = "Idade informada é de um Idoso ";
             }
         }
