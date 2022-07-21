@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estações do ano</title>
+</head>
+
+<body>
+    <header>
+        <h3>Verifique qual estação estamos na presente data e hemisfério escolhido</h3>
+    </header>
+    <main>
+
+        <label for="data">Digite uma data</label>
+        <input type="date" id="dataInformada" name="data1"><br><br>
+
+        <!-- <select name="select">
+            <option value="Hemisfério Sul" id="sul" selected>Hemisfério Sul</option>
+            <option value="Hemisfério Norte" id="norte">Hemisfério Norte</option>
+        </select> <br> <br> -->
+        <button onclick="clicar()">Verificar</button>
+        <p id="resultado"></p>
+
+    </main>
+
+    <script>
+
+
+        function clicar() {
+            var data = document.querySelector("#dataInformada").value;
+            if (data >= 22/12 || data <= 21/03) {
+                document.querySelector("#resultado").innerHTML = "A estação é Verão";
+            } 
+            else if (data >= 22 / 03 || data <= 21 / 06) {
+                document.querySelector("#resultado").innerHTML = "A estação é Outono";
+            } else if (data >= 22 / 06 || data <= 21 / 09) {
+                document.querySelector("#resultado").innerHTML = "A estação é Inverno";
+            } else if (data >= 22 / 09 || data <= 21 / 12) {
+                document.querySelector("#resultado").innerHTML = "A estação é Primavera";
+            }
+        }
+    </script>
+</body>
+
+</html>
