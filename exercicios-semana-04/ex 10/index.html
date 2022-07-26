@@ -31,14 +31,14 @@
 
         function clicar() {
             var data = document.querySelector("#dataInformada").value;
-            if (data >= 22/12 || data <= 21/03) {
+            if (data >= "22/12" || data <= "21/03") {
                 document.querySelector("#resultado").innerHTML = "A estação é Verão";
             } 
-            else if (data >= 22 / 03 || data <= 21 / 06) {
+            else if (data >= "22/03" || data <= "21/06") {
                 document.querySelector("#resultado").innerHTML = "A estação é Outono";
-            } else if (data >= 22 / 06 || data <= 21 / 09) {
+            } else if (data >= "22/06" || data <= "21/09") {
                 document.querySelector("#resultado").innerHTML = "A estação é Inverno";
-            } else if (data >= 22 / 09 || data <= 21 / 12) {
+            } else if (data >= "22/09" || data <= "21/12") {
                 document.querySelector("#resultado").innerHTML = "A estação é Primavera";
             }
         }
