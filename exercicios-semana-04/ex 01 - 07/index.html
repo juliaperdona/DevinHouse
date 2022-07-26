@@ -9,7 +9,7 @@
     <title>BancoDev</title>
 </head>
 
-<body>
+<body onload="calculaValor()">
     <header>
         <h1>Banco BlueBee</h1>
     </header>
@@ -20,21 +20,20 @@
         </select>
         <br>
         <br>
-        <br>
 
         <label for="num1">Valor</label>
-        <input type="number" id="num01" name="num01">
+        <input type="number" id="valor" name="num01">
         <br>
         <br>
 
         <select name="opcoes" id="saqueDeposito">
-            <option value="sacar">Sacar</option>
-            <option value="deposito">Depósito</option>
+            <option value="sacar" id="saque">Sacar</option>
+            <option value="depositar" id="deposito">Depósito</option>
         </select>
         <br>
         <br>
         <br>
-        <button onclick="">Confirmar</button>
+        <button onclick="calculaValor()">Confirmar</button>
 
 
     </main>

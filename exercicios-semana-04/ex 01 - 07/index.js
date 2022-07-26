@@ -16,8 +16,24 @@ const contasClientes = [
     },
 ];
 
-let client = document.getElementById("exibirContas")
+const calculaValor = function () {
+
+    let client = document.getElementById("exibirContas")
+    let valor = document.getElementById("valor").value || 0
+    let BankAccount = document.getElementById("saqueDeposito").value
+    let newValue = Number(valor)
     contasClientes.forEach(i => {
-    let option = new Option(i.nome)
-    client.options[client.options.length] = option 
-})
+        let option = new Option(i.nome, i.id)
+        client.options[client.options.length] = option
+
+        new Set(client)
+
+        if (client.value == i.id && BankAccount == "sacar") {
+            return console.log(i.saldo - newValue)
+        }
+        if (client.value == i.id && BankAccount == "depositar") {
+            return console.log(i.saldo + newValue)
+        }
+
+    })
+}
